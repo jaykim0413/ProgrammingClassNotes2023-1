@@ -1,0 +1,2 @@
+javac mayhem.java
+java mayhem
