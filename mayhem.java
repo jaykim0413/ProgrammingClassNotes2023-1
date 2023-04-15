@@ -9,6 +9,7 @@ public class mayhem {
     class5();
     class6();
     class7();
+    class8();
     System.out.println();
   }
 
@@ -264,10 +265,19 @@ public class mayhem {
     System.out.println("\n");
 
     // Format of a Method
+    System.out.println("header / 헤더 {\t\t>>\t접근제어자 기타제어자 리턴타입 메소드이름( Argument(s) ) {");
+    System.out.println("\t\t\t>>\n\tbody\t\t>>\t// 메소드 본체를 이루는 문장\n\t바디\t\t>>\t// return Value;\n}\t\t\t>>\t}\n");
 
+    System.out.println("메소드 이름\n: 변수 이름 작성 규칙과 동일\n: 소문자로 시작\n: 띄어쓰기 X\n");
+    System.out.println(
+        "Arguments\n\n: 메소드에 사용할 외부 값\n: Arguments는 0개 이상\n: 타입과 변수 이름을 작성해서 메소드로 받는다.\n: 같은 타입을 입력할 때도 각각 매번 데이터 타입을 작성 해주어야 한다.\n");
+    System.out.println("return\n: 헤더에 있는 리턴 타입과 동일한 타입을 가진 값을 return 해주어야 한다.\n");
     // Uses of Methods
-
+    System.out.println("재귀 메소드가 아닌 경우,\nmain을 제외하고 단 하나의 메소드만 존재한다면 main 메소드만이 다른 메소드를 호출할 수 있다.\n");
+    System.out.println("메소드는 자신의 리턴 타입으로 쓰인다.");
     // Why do we use Methods?
+    System.out.println(
+        "반복되는 코드를 다시 작성하지 않아도 된다.\n: 프로그램이 논리적으로 간결해진다.\n: 우선 선언된 메소드는 이후 다시 사용할 수 있다.(재사용성)\n\n\"모듈화 Modularity\"");
   }
 
   public static void class9() {
