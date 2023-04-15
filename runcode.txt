@@ -1,2 +1,2 @@
 javac mayhem.java
-java mayhem
+java mayhem 4
