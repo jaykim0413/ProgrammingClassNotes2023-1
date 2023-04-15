@@ -17,5 +17,21 @@ public class test {
     }
 
     System.out.println(stringA);
+
+    double b = 23.345345453456;
+    System.out.println("\n" + b);
+    System.out.println(Math.round(b));
+    long c = Math.round(b);
+    Long longB = Double.doubleToLongBits(b);
+    String stringB = Long.toBinaryString(longB);
+    String stringC = Long.toBinaryString(c);
+    while (stringC.length() < 64) {
+      stringC = "0" + stringC;
+    }
+    while (stringB.length() < 64) {
+      stringB = "0" + stringB;
+    }
+    System.out.println(stringB);
+    System.out.println(stringC);
   }
 }
