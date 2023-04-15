@@ -11,6 +11,7 @@ public class mayhem {
     class7();
     class8();
     class9();
+    class10();
     System.out.println();
   }
 
@@ -278,7 +279,7 @@ public class mayhem {
     System.out.println("메소드는 자신의 리턴 타입으로 쓰인다.\n");
     // Why do we use Methods?
     System.out.println(
-        "반복되는 코드를 다시 작성하지 않아도 된다.\n: 프로그램이 논리적으로 간결해진다.\n: 우선 선언된 메소드는 이후 다시 사용할 수 있다.(재사용성)\n\n\"모듈화 Modularity\"");
+        "반복되는 코드를 다시 작성하지 않아도 된다.\n: 프로그램이 논리적으로 간결해진다.\n: 우선 선언된 메소드는 이후 다시 사용할 수 있다.(재사용성)\n\n\"모듈화 Modularity\"\n");
   }
 
   public static void class9() {
@@ -287,7 +288,10 @@ public class mayhem {
 
     // Overloading
     System.out.println(
-        "메소드 오버로딩: 같은 이름의 메소드를 다른 Signiture(시그니처)를 가지고 선언하는 것\n\n>> 시크니처 란? Method 고유의 정체성(?)과 같은 것(Ex. methodName, # of Arguments, Arguments의 타입)\n\n>> 메소드 오버로딩에서는 이름이 같은 메소드를 두 개 이상 만드는 것이니,\n- 메소드가 받는 Arguments(parameters)의 개수를 다르게 해주거나\n- 메소드가 받는 Arguments(parameters) 중 하나의 타입이라도 다르게 바꿔주거나\n- Arguments의 개수와 타입 모두를 바꿔주면 Method Overloading이 이루어진다.");
+        "메소드 오버로딩: 같은 이름의 메소드를 다른 Signiture(시그니처)를 가지고 선언하는 것\n\n>> 시크니처 란? Method 고유의 정체성(?)과 같은 것(Ex. methodName, # of Arguments, Arguments의 타입)\n\n>> 메소드 오버로딩에서는 이름이 같은 메소드를 두 개 이상 만드는 것이니,\n- 메소드가 받는 Arguments(parameters)의 개수를 다르게 해주거나\n- 메소드가 받는 Arguments(parameters) 중 하나의 타입이라도 다르게 바꿔주거나\n- Arguments의 개수와 타입 모두를 바꿔주면 Method Overloading이 이루어진다.\n");
+    System.out
+        .println(
+            "Method Overloading이 Programmer한테 좋은 이유: 입력 Arguments가 다르다고 비슷한 기능의 Method를 매번 다른 이음으로 선언할 필요가 없다.\nMethod Overloading이 User한테 좋은 이유: User들은 많은 메소드의 이름을 외우지 않아도 하나의 메소드가 overloading을 통해서 여러 종류의 arguments 조합을 받아들이는 비슷한 기능의 동일명 메소드와 호환이 되기 때문에 편리하다.");
     // API
     System.out.println(
         "API는 Application Programming Interface의 약자로 Programmer들이 많이 사용하는 Method를 모아둔 일종의 메소드 모음집이다.\n\nJAVA에서도 이런 API가 있는데, 이를 JAVA API Class라고 한다.\n- String과 같은 데이터 타입을 나타내는 Class(클래스)가 포함되어 있기도 하다.\n- 이외에도 입력을 받을 때 사용하는 Scanner 클래스 또한 java.util이라고 하는 Package 안에 있는 Scanner라는 클래스를 import 키워드를 통해서 불러오는 것으로 JAVA API Class에 속한다.\n\n이런 JAVA API에 있는 Class 혹은 Method는 import 키워드를 class 선언문 이전에 입력해서 사용할 수 있다.");
@@ -298,7 +302,16 @@ public class mayhem {
     System.out.println("\n");
 
     // Definition of Recursion
-
+    System.out
+        .println(
+            "재귀 호출 메소드 / 재귀 함수\n- 자기 자신을 다시 메소드 body 내에서 호출하는 메소드\n- Recursion Method 또는 Recursive Method라고 부른다.\n- 프로그램 구조상 재귀 호출이 반복제어보다 간결하다.\n- 단 Recursion이 발생할 경우, Iteration, 즉 반복제어를 사용할 때보다 더 오래 걸린다.\n");
+    System.out.println(
+        "재귀 호출 표현의 위치\n- 만일 print 혹은 연산 등의 다른 문장이 재귀호출문과 함께 사용되면 재귀 호출문의 위치가 중요해진다.\n\n1. 재귀 호출문이 다른 출력 / 연산 표현 앞에 올 경우:\t다른 코드 이전에 메소드가 재호출된다. 따라서 가장 마지막에 불린 메소드부터 역방향으로 실행이 된다.\n2. 재귀 호출문이 다른 출력 / 연산 표현 뒤에 올 경우:\t다른 코드들이 먼저 실행된 이후 메소드가 재호출된다. 따라서 다른 문장들은 메소드가 처음 호출된 그 순서대로 순방향 실행이 된다.\n\n");
     // Two types of Recursion & Recursion with Memoization
+    System.out.println("<!!!주의!!!>\n시험에 출제되지 않을 수 있음.\n\n");
+    System.out.println(
+        "재귀 호출 메소드의 종류\n\n1. Tail Recursion:\n-\t메소드만 재호출이 되고, 최종 결과 값으로 원하는 값은 같이 Arguments(Parameters)로 넣어서 재호출한다.\n-\t스택 자료 구조 속에서 저장된 값을 다시 읽을 필요가 없어져 실행 시간이 단축된다.\n\n2. Augmented Recursion:\n-\t메소드 외에 다른 연산이 메소드에 이루어지며 함께 재귀 호출된다.\n-\t스택 자료구조를 역방향으로 읽을 때, 원래 초기 호출 메소드까지 돌아갔다가 다시 연산을 해야하기 때문에 비교적 Tail Recursion보다 오래 걸린다.");
+    System.out
+        .println("\n\nRecursion with Memoization\n\n재귀 호출 과정에서 연산되는 단계별 계산 값을 저장한다.\n같은 연산을 중복하지 않을 수 있어 연산 시간이 단축된다.");
   }
 }
