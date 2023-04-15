@@ -1,3 +1,5 @@
+package classOverview;
+
 import java.util.Scanner;
 
 public class mayhem {
