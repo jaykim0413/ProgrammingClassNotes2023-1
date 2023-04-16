@@ -1,4 +1,3 @@
-package classOverview;
 
 import java.util.Scanner;
 

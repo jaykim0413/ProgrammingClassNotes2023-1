@@ -1,4 +1,3 @@
-package practiceQuestionsFromMrKimClass;
 
 import java.util.Scanner;
 
@@ -172,5 +171,81 @@ public class Methods {
     }
 
     return est;
+  }
+
+  public static void oneLevelOfMultiplicationTable(int n) {
+    for (int i = 1; i <= 9; i++) {
+      System.out.print(n + " * " + i + " = " + i * n + "  ");
+    }
+    System.out.println();
+  }
+
+  public static double arithSeq(double a, double d, int n) {
+    return (a + (n - 1.0) * d);
+  }
+
+  public static void allCommonDivisorsOfANB(int a, int b) {
+    for (int i = 1; i <= ((a > b) ? b : a); i++) {
+      if (a % i == 0 && b % i == 0) {
+        System.out.print(i + " ");
+      }
+    }
+  }
+
+  public static void lcm(int a, int b) {
+    for (int i = 1; i <= a * b; i++) {
+      if (i % a == 0 && i % b == 0) {
+        System.out.print(i + " ");
+      }
+    }
+  }
+
+  // RECURSION
+  public static int recurSum(int n) {
+    if (n == 1) {
+      return 1;
+    } else {
+      return n + recurSum(n - 1);
+    }
+  }
+
+  public static int factorial(int n) {
+    if (n == 1) {
+      return 1;
+    } else {
+      return n * factorial(n - 1);
+    }
+  }
+
+  public static int fibonacci(int n) {
+    if (n == 1 || n == 2) {
+      return 1;
+    } else {
+      return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+  }
+
+  public static int recurGCD(int n, int m) {
+    if (m == 0) {
+      return n;
+    } else {
+      return recurGCD(m, n % m);
+    }
+  }
+
+  public static int hanoiNum(int n) {
+    if (n == 1) {
+      return 1;
+    } else {
+      return 2 * hanoiNum(n - 1) + 1;
+    }
+  }
+
+  public static int biCoeff(int n, int k) {
+    if (k == 0 || n == k) {
+      return 1;
+    } else {
+      return biCoeff(n - 1, k - 1) + biCoeff(n - 1, k);
+    }
   }
 }

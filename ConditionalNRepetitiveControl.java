@@ -1,19 +1,29 @@
-package practiceQuestionsFromMrKimClass;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class ConditionalNRepetitiveControl {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
     // pg 5
+    pg5(args);
     // pg 6-1
+    pg6_1(args);
     // pg 6-2
+    pg6_2(args);
     // pg 8-1
+    pg8_1();
     // pg 8-2
+    pg8_2();
     // pg 8-3
+    pg8_3();
     // pg 8-4
+    pg8_4();
     // pg 8-5
+    pg8_5();
     // pg 8-6
+    pg8_6();
     // pg 9
+    pg9();
   }
 
   public static void pg5(String[] args) {
@@ -99,7 +109,7 @@ public class ConditionalNRepetitiveControl {
     System.out.println("\nwhile : ");
     int a = 0;
     while (a < 10) {
-      System.out.println(++a);
+      System.out.print(++a + " ");
     }
   }
 
@@ -199,7 +209,6 @@ public class ConditionalNRepetitiveControl {
           cnt++;
         }
       } else {
-        System.out.println(n + " is not a prime number");
         break;
       }
     }
@@ -244,26 +253,20 @@ public class ConditionalNRepetitiveControl {
     sc.close();
   }
 
-  public static void pg9() {
-    Scanner sc = new Scanner(System.in);
+  public static void pg9() throws IOException {
     int input = 0;
     int odd = 0;
     int even = 0;
 
     do {
-      input = sc.nextInt();
-      switch (input % 2) {
-        case 0:
-          even++;
-          break;
-        case 1:
-          odd++;
-          break;
+      input = (int) System.in.read();
+      if (input % 2 == 0) {
+        odd++;
+      } else {
+        even++;
       }
     } while (input >= 0);
 
-    System.out.println("odd : " + odd + ", even : " + even);
-
-    sc.close();
+    System.out.println("even: " + even + ", odd: " + odd);
   }
 }
